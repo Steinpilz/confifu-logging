@@ -1,5 +1,6 @@
 ﻿using Confifu.Abstractions;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
 using System;
 
 namespace Confifu.Logging.Abstractions
@@ -17,13 +18,13 @@ namespace Confifu.Logging.Abstractions
         public static Func<ILoggerFactory> GetLoggerFactoryFunc(this IAppConfig appConfig) 
             => appConfig[LoggerFactoryKey] as Func<ILoggerFactory>;
 
-        public static ILoggerFactory ResolveLoggerFactory(this IAppConfig appConfig) 
+        public static ILoggerFactory ResolveLoggerFactory(this IAppConfig appConfig)
             => appConfig.GetLoggerFactoryFunc()?.Invoke();
 
         public static ILogger GetLogger(this IAppConfig appConfig, string categoryName)
-            => appConfig.ResolveLoggerFactory()?.CreateLogger(categoryName);
+            => appConfig.ResolveLoggerFactory()?.CreateLogger(categoryName) ?? NullLogger.Instance;
 
         public static ILogger GetLogger<T>(this IAppConfig appConfig)
-            => appConfig.ResolveLoggerFactory()?.CreateLogger<T>();
+            => appConfig.ResolveLoggerFactory()?.CreateLogger<T>() as ILogger ?? NullLogger.Instance;
     }
 }
