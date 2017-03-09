@@ -1,16 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".sln", ".sln", "{CC408C3F-1C0B-498C-A043-DF8DD3F7FDE8}"
 	ProjectSection(SolutionItems) = preProject
 		build.fsx = build.fsx
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Confifu.Abstractions.Logging", "src\app\Confifu.Abstractions.Logging\Confifu.Abstractions.Logging.xproj", "{F6115BD2-5BAF-4AFA-A55D-64EFCB7FA5B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Confifu.Abstractions.Logging", "src\app\Confifu.Abstractions.Logging\Confifu.Abstractions.Logging.csproj", "{F6115BD2-5BAF-4AFA-A55D-64EFCB7FA5B1}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Confifu.Logging.Microsoft", "src\app\Confifu.Logging.Microsoft\Confifu.Logging.Microsoft.xproj", "{C20C8AFB-CEBA-4637-9311-97B4DD0B7608}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Confifu.Logging.Microsoft", "src\app\Confifu.Logging.Microsoft\Confifu.Logging.Microsoft.csproj", "{C20C8AFB-CEBA-4637-9311-97B4DD0B7608}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

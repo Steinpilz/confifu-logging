@@ -4,11 +4,11 @@ open Fake
 open DotNetCli
 
 // Properties
-let artifactsDir = "./.artifacts"
-let buildDir = artifactsDir + "/build/"
-let testDir = artifactsDir + "/test/"
-let publishDir = artifactsDir + "/publish/"
-let testDlls = testDir + "*.Tests.dll"
+let artifactsDir = "./.artifacts" |> FullName
+let buildDir = artifactsDir @@ "/build/"
+let testDir = artifactsDir @@ "/test/"
+let publishDir = artifactsDir @@ "/publish/"
+let testDlls = testDir @@ "*.Tests.dll"
 
 let appProjects = "src/app/**/project.json"
 let testProjects = "src/test/**/project.json"
