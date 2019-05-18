@@ -4,9 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".sln", ".sln", "{CC408C3F-1C0B-498C-A043-DF8DD3F7FDE8}"
-	ProjectSection(SolutionItems) = preProject
-		build.fsx = build.fsx
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Confifu.Abstractions.Logging", "src\app\Confifu.Abstractions.Logging\Confifu.Abstractions.Logging.csproj", "{F6115BD2-5BAF-4AFA-A55D-64EFCB7FA5B1}"
 EndProject
@@ -29,5 +26,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {662D8CB4-5959-45B8-8D21-55847F94E83D}
 	EndGlobalSection
 EndGlobal
